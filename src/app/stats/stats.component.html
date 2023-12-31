@@ -1,0 +1,12 @@
+<div class="main">
+    <div class="main ms-5 mt-5" *ngFor="let stat of statsData; let i=index">
+        <div>Game number: {{i+1}}</div>
+        <div>Player: {{stat.Name}}</div>
+        <div>Game name: {{stat.Game}}</div>
+        <div>Number of attempts to complete game: {{stat.Attempts}}</div>
+        <div>Time to complete: {{stat.Time}}</div>
+        <div>Date completed: {{stat.Date | date: 'dd-MM-yyyy HH:mm'}}</div>
+        <br/>
+        <br/>
+    </div>
+</div>

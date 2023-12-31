@@ -1,0 +1,83 @@
+<app-name *ngIf="!name_entered" (nameEvent)="receiveName($event)"></app-name>
+
+<div *ngIf="name_entered" class="main">
+    <div *ngIf="start" class="d-flex">
+        <button (click)="rollDice()" class="mt-3 ms-auto me-auto mb-3">Roll all dice</button>
+    </div>
+    
+    <div *ngIf="rolled" class="d-flex flex-column justify-content-center">
+        <div class="text-center">Number of rolls: {{count}}</div>
+        <div class="text-center">
+            Choose which dice to hold if any
+        </div>
+        <button (click)="rollRemainingDice()" class="mt-3 ms-auto me-auto mb-3">Roll remaining dice</button>
+        <div *ngIf="isRunning">Time: {{elapsedTime | date: 'mm:ss'}}</div>
+    </div>
+    
+    <div class="d-flex justify-content-center">
+        <div>
+            <button [disabled]="hold_one" (click)="generateRandomNumber1()" class="die mt-2 mb-2 me-2">{{num1}}</button>
+            <button [disabled]="hold_one" (click)="holdNumber1(num1)">Hold</button>
+        </div>
+        <div>
+            <button [disabled]="hold_two" (click)="generateRandomNumber2()" class="die mt-2 mb-2 me-2">{{num2}}</button>
+            <button [disabled]="hold_two" (click)="holdNumber2(num2)">Hold</button>
+        </div>
+        <div>
+            <button [disabled]="hold_three" (click)="generateRandomNumber3()" class="die mt-2 mb-2 me-2">{{num3}}</button>
+            <button [disabled]="hold_three" (click)="holdNumber3(num3)">Hold</button>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div>
+            <button [disabled]="hold_four" (click)="generateRandomNumber4()" class="die mt-2 mb-2 me-2">{{num4}}</button>
+            <button [disabled]="hold_four" (click)="holdNumber4(num4)">Hold</button>
+        </div>
+        <div>
+            <button [disabled]="hold_five" (click)="generateRandomNumber5()" class="die mt-2 mb-2 me-2">{{num5}}</button>
+            <button [disabled]="hold_five" (click)="holdNumber5(num5)">Hold</button>
+        </div>
+        <div>
+            <button [disabled]="hold_six" (click)="generateRandomNumber6()" class="die mt-2 mb-2 me-2">{{num6}}</button>
+            <button [disabled]="hold_six" (click)="holdNumber6(num6)">Hold</button>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div>
+            <button [disabled]="hold_seven" (click)="generateRandomNumber7()" class="die mt-2 mb-2 me-2">{{num7}}</button>
+            <button [disabled]="hold_seven" (click)="holdNumber7(num7)">Hold</button>
+        </div>
+        <div>
+            <button [disabled]="hold_eight" (click)="generateRandomNumber8()" class="die mt-2 mb-2 me-2">{{num8}}</button>
+            <button [disabled]="hold_eight" (click)="holdNumber8(num8)">Hold</button>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div>
+            <button [disabled]="hold_nine" (click)="generateRandomNumber9()" class="die mt-2 mb-2 me-2">{{num9}}</button>
+            <button [disabled]="hold_nine" (click)="holdNumber9(num9)">Hold</button>
+        </div>
+        <div>
+            <button [disabled]="hold_ten" (click)="generateRandomNumber10()" class="die mt-2 mb-2 me-2">{{num10}}</button>
+            <button [disabled]="hold_ten" (click)="holdNumber10(num10)">Hold</button>
+        </div>
+    </div>
+    <button class="tenzies" (click)="finished()">Tenzies</button>
+    <div *ngIf="!isRunning && tenzied"> Time to complete: {{timeTaken}}</div>
+</div>
+
+<!-- <div class="main">
+    
+    <div class="d-flex justify-content-center">
+        <div>
+            <app-dice (diceNumber)="receivedNumber($event)"></app-dice>
+        </div>
+  
+    <button class="tenzies" (click)="finished()">Tenzies</button>
+    <div *ngIf="!isRunning && tenzied"> Time to complete: {{timeTaken}}</div>
+</div> -->
+
+

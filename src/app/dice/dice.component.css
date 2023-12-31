@@ -1,0 +1,13 @@
+.die{
+    height: 2em;
+    width: 2em;
+    border: solid rgb(205, 194, 194);
+    font-size: 2em;
+    text-align: center;
+    background-color: purple;
+}
+
+button{
+    margin-right: 5px;
+    margin-left: 5px;
+}

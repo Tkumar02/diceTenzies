@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dice-77735": {
+      "hosting": {
+        "dice-game": [
+          "dice-77735"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dice-77735"
+  }
+}

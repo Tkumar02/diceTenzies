@@ -1,0 +1,21 @@
+.die{
+    height: 2em;
+    width: 2em;
+    border: solid rgb(205, 194, 194);
+    font-size: 2em;
+    text-align: center;
+}
+
+button{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.tenzies {
+    margin-left: 40%;
+    margin-top: 10px;
+    background-color: pink;
+    height: 50px;
+    width: 100px;
+    font-size: 25px;
+}
